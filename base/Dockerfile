@@ -14,4 +14,4 @@ COPY image-files/ /
 
 EXPOSE 80 443
 
-CMD ["supervisord","-n"]
+CMD ["nginx"]
