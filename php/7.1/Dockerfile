@@ -1,4 +1,4 @@
-FROM registry.cn-hangzhou.aliyuncs.com/xutongle/php:latest
+FROM xutongle/php:7.1
 
 MAINTAINER XUTONGLE <xutongle@gmail.com>
 
