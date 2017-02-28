@@ -1,4 +1,4 @@
-FROM yuncms/php:5.6
+FROM registry.cn-hangzhou.aliyuncs.com/xutongle/php:5.6
 
 MAINTAINER XUTONGLE <xutongle@gmail.com>
 

@@ -1,4 +1,4 @@
-FROM yuncms/php:7.0
+FROM debian:jessie
 
 MAINTAINER XUTONGLE <xutongle@gmail.com>
 
