@@ -4,7 +4,10 @@ MAINTAINER XUTONGLE <xutongle@gmail.com>
 
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ABF5BD827BD9BF62 \
     && echo "deb http://www.nginx.org/packages/debian/ jessie nginx" > /etc/apt/sources.list.d/nginx.list \
-	&& apt-get update && apt-get install -y nginx --no-install-recommends && rm -rf /var/lib/apt/lists/*
+	&& apt-get update \
+	&& apt-get install -y nginx --no-install-recommends \
+	&& rm -rf /var/lib/apt/lists/* \
+	&& usermod -u 1000 www-data
 
 # Add configuration files
 COPY image-files/ /
