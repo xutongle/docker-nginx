@@ -7,25 +7,3 @@ services:
     image: xutongle/nginx:5.6-cli
     environment:
       - GITHUB_API_TOKEN=${GITHUB_API_TOKEN}
-
-  5.6-fpm:
-    build:
-      dockerfile: Dockerfile
-      context: '5.6/fpm'
-      args:
-        - GITHUB_API_TOKEN=${GITHUB_API_TOKEN}
-    image: xutongle/php:5.6-fpm
-    environment:
-      - GITHUB_API_TOKEN=${GITHUB_API_TOKEN}
-
-  5.6-nginx:
-    build:
-      dockerfile: Dockerfile
-      context: '5.6/fpm'
-      args:
-        - GITHUB_API_TOKEN=${GITHUB_API_TOKEN}
-    image: xutongle/php:5.6-nginx
-    depends_on:
-          - 5.6-fpm
-    environment:
-      - GITHUB_API_TOKEN=${GITHUB_API_TOKEN}
